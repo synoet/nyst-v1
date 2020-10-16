@@ -1,5 +1,11 @@
 import React from "react"
+import Hero from '../components/sections/hero.js'
 
 export default function Home() {
-  return <div>Hello world!</div>
+  return (
+    
+    <div>
+      <Hero />
+    </div>
+  )
 }
