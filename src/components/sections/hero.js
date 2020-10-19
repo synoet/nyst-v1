@@ -30,7 +30,7 @@ display: -webkit-flex;
 display: -ms-flexbox;
 display: flex;
 width: 100%;
-max-width: 1200px;
+max-width: 1400px;
 margin-top: 225px;
 margin-right: 40px;
 margin-left: 40px;
@@ -57,15 +57,61 @@ color: #53d4ba;
 font-size: 24px;
 `;
 
+const DescriptionWrap = styled.div`
+width: 70%;
+margin-right: auto;
+margin-left: auto;
+`;
+
 const HeroName = styled.h1`
     width: 70%;
-    font-size: 72px;
+    font-size: 82px;
+    font-weight: 600;
+    line-height: 20px
 `;
 
 const HeroDesc = styled.h2`
-width: 70%;
-font-size: 20px;
-line-height: 34px;
+width: 100%;
+font-size: 24px;
+line-height: 40px;
+`;
+
+const Button = styled.button`
+padding: 12px 32px;
+border-style: solid;
+border-width: 3px;
+border-color: #53d4ba;
+border-radius: 6px;
+background-color: transparent;
+-webkit-transition: all 300ms ease;
+transition: all 300ms ease;
+color: #53d4ba;
+font-size: 16px;
+line-height: 24px;
+font-weight: 700;
+letter-spacing: 2px;
+
+:hover {
+    border-color: #53d4ba;
+    -webkit-transform: translate(0px, -5px);
+    -ms-transform: translate(0px, -5px);
+    transform: translate(0px, -5px);
+    color: #53d4ba;
+`;
+
+const DescLink = styled.a`
+color: #53d4ba;
+display: inline-block;
+border-bottom: 3px solid #e0e0e0;
+text-decoration: none;
+
+:hover {
+    border-bottom-color: transparent;
+    -webkit-transform: skew(0deg, 3deg);
+    -ms-transform: skew(0deg, 3deg);
+    transform: skew(0deg, 3deg);
+
+
 `;
 
 const hero = () => {
@@ -74,9 +120,12 @@ const hero = () => {
             <SectionHero>
                 <Container>
                     <HeroIntro> Hello, my name is</HeroIntro>
-                    <HeroName>Teo Nys</HeroName>
-                    <HeroDesc>New York City--based developer & designer that cares a lot about creating useful, meaningful, and well-crafted products. I’m currently working on Clarissa AI — an intelligent medical assistant.</HeroDesc>
-                    <HeroDesc>Take a look through my work below. If you want to say hi, or chat about a new project — get in touch.</HeroDesc>
+                    <HeroName>Teo Nys 👋</HeroName>
+                    <DescriptionWrap>
+                        <HeroDesc>New York City--based developer & designer that cares a lot about creating useful, meaningful, and well-crafted products. I’m currently working on <DescLink> Clarissa AI </DescLink> — an intelligent medical assistant.</HeroDesc>
+                        <HeroDesc>Take a look through my work below. If you want to say hi, or chat about a new project — <DescLink href = 'teonys@nyu.edu'>get in touch.</DescLink></HeroDesc>
+                        <Button>Full Bio & Resume</Button> 
+                    </DescriptionWrap>
                 </Container>
             </SectionHero>
     )
