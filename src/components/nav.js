@@ -26,7 +26,7 @@ padding-bottom: 16px;
 -ms-flex-pack: center;
 justify-content: center;
 background-color: #0a192e;
-font-family: Sfmono, sans-serif;
+font-family: var(--font-mono);
 color: #fff;
 font-size: 17px;
 
@@ -43,7 +43,12 @@ display: -webkit-flex;
 display: -ms-flexbox;
 display: flex;
 margin-right: -20px;
+padding-right: 10rem;
 
+`;
+
+const LogoWrap = styled.div`
+padding-left: 10rem;
 `;
 const NavContent = styled.div`
 display: -webkit-box;
@@ -76,15 +81,17 @@ letter-spacing: 0.25px;
 
 `;
 
+
+
 const nav = () => {
     return (
         <StyledHeader>
             <StyledNav>
                     <NavContent>
-                        <Logo></Logo> 
+                        <LogoWrap><Logo /></LogoWrap>
                         <NavWrap>
                             {navLinks.map(({url, name}, index) => (
-                                <NavLink>{index + 1}.{name}</NavLink>
+                                <NavLink>{index + 1}. {name}</NavLink>
                             ))}
                         </NavWrap>
                     </NavContent>

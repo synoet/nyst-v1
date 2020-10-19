@@ -79,8 +79,6 @@ const hero = () => {
                     <HeroDesc>Take a look through my work below. If you want to say hi, or chat about a new project — get in touch.</HeroDesc>
                 </Container>
             </SectionHero>
-
-
     )
 }
 
