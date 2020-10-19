@@ -54,6 +54,9 @@ justify-content: center;
 -webkit-align-items: center;
 -ms-flex-align: center;
 align-items: center;
+@media (max-width: 1080px) {
+    margin-top 7vh;
+   }
 `;
 
 const HeroIntro = styled.h1`
