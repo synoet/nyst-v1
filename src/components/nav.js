@@ -81,7 +81,6 @@ align-items: center;
 flex: 1;
 `;
 
-
 const NavLink = styled.p`
 padding: 9px 24px;
 color: #f7f7f7;
@@ -97,8 +96,6 @@ letter-spacing: 0.25px;
     transform: skew(0deg, 3deg);
 
 `;
-
-
 
 const nav = () => {
     return (
