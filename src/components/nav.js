@@ -10,7 +10,8 @@ const StyledHeader = styled.header`
 `;
 
 const StyledNav = styled.nav`
-padding-left: 10rem;
+padding-left: 20rem;
+padding-right: 20rem;
 position: -webkit-sticky;
 position: sticky;
 top: 0px;
@@ -44,7 +45,6 @@ display: -webkit-flex;
 display: -ms-flexbox;
 display: flex;
 margin-right: -20px;
-padding-right: 10rem;
 
 `;
 

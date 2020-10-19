@@ -34,7 +34,7 @@ display: -ms-flexbox;
 display: flex;
 width: 100%;
 max-width: 1400px;
-margin-top: 225px;
+margin-top: 160px;
 margin-right: 40px;
 margin-left: 40px;
 padding-top: 147px;
@@ -133,8 +133,8 @@ li {
   padding: 10px;
   a {
     svg {
-      width: 20px;
-      height: 20px;
+      width: 23px;
+      height: 23px;
       fill: #8892b0;
     }
   }
