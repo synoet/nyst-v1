@@ -31,6 +31,19 @@ font-size: 17px;
 
 
 `;
+
+const NavWrap = styled.div`
+margin-right: -24px;
+-webkit-align-self: flex-start;
+-ms-flex-item-align: start;
+align-self: flex-start;
+display: -webkit-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+display: flex;
+margin-right: -20px;
+
+`;
 const NavContent = styled.div`
 display: -webkit-box;
 display: -webkit-flex;
@@ -52,7 +65,7 @@ flex: 1;
 `;
 
 
-const NavLink = styled.li`
+const NavLink = styled.p`
 padding: 9px 24px;
 color: #f7f7f7;
 font-size: 14px;
@@ -67,9 +80,12 @@ const nav = () => {
         <StyledHeader>
             <StyledNav>
                     <NavContent>
+                        <NavWrap>
                             {navLinks.map(({url, name}, index) => (
-                                <NavLink><Link>{index + 1}.{name}</Link></NavLink>
+                                <NavLink>{index + 1}.{name}</NavLink>
                             ))}
+
+                        </NavWrap>
                     </NavContent>
             </StyledNav> 
         </StyledHeader>
