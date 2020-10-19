@@ -1,14 +1,23 @@
 import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import styled, { ThemeProvider } from 'styled-components';
-import Nav from 'nav.js';
-import Side from 'side.js';
+import Hero from '../components/sections/hero.js'
+import Nav from '../components/nav.js'
+import GlobalStyles from '../styles/GlobalStyle'
+
+const StyledContent = styled.div`
+font-family: var(--font-mono);
+`;
 
 
 const layout = () => {
     return (
-        <div>
-            
+        <div id = 'root'>
+            <GlobalStyles/>
+            <StyledContent>
+                <Nav></Nav>
+                <Hero></Hero>
+            </StyledContent>
         </div>
     )
 }

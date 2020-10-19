@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import styled, {css} from 'styled-components';
 import {navLinks } from '../config.js'
+import Logo from './icons/logo.js'
 
 const StyledHeader = styled.header`
 
@@ -80,11 +81,11 @@ const nav = () => {
         <StyledHeader>
             <StyledNav>
                     <NavContent>
+                        <Logo></Logo> 
                         <NavWrap>
                             {navLinks.map(({url, name}, index) => (
                                 <NavLink>{index + 1}.{name}</NavLink>
                             ))}
-
                         </NavWrap>
                     </NavContent>
             </StyledNav> 
