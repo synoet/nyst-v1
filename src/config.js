@@ -12,7 +12,7 @@ module.exports = {
         },
         {
             name: 'Twitter',
-            url: 'https://twitter.com/nysteo'
+            url: 'https://twitter.com/nysteo_'
         }
     ],
     navLinks: [
