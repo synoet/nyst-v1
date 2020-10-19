@@ -10,8 +10,8 @@ const StyledHeader = styled.header`
 `;
 
 const StyledNav = styled.nav`
-padding-left: 20rem;
-padding-right: 20rem;
+padding-left: 5vw;
+padding-right: 5vw;
 position: -webkit-sticky;
 position: sticky;
 top: 0px;
@@ -89,6 +89,12 @@ font-size: 14px;
 line-height: 24px;
 font-weight: 400;
 letter-spacing: 0.25px;
+:hover {
+    color: #53D4BA;
+    border-bottom-color: transparent;
+    -webkit-transform: skew(0deg, 3deg);
+    -ms-transform: skew(0deg, 3deg);
+    transform: skew(0deg, 3deg);
 
 `;
 

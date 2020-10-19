@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Icon from '../icons/icon.js';
 
 import {socialMedia} from '../../config'
+import {skills} from '../../config'
 
 
 const SectionHero = styled.div`
@@ -28,12 +29,13 @@ color: #e8e8e8;
 `;
 
 const Container = styled.div`
+font-size: 22px;
 display: -webkit-box;
 display: -webkit-flex;
 display: -ms-flexbox;
 display: flex;
 width: 100%;
-max-width: 1400px;
+max-width: 1600px;
 margin-top: 160px;
 margin-right: 40px;
 margin-left: 40px;
@@ -64,6 +66,28 @@ const DescriptionWrap = styled.div`
 width: 70%;
 margin-right: auto;
 margin-left: auto;
+
+ul.skills-list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(140px, 200px));
+    padding: 0;
+    margin: 20px 0 0 0;
+    overflow: hidden;
+    list-style: none;
+    color: #8892b0;
+    li {
+      position: relative;
+      margin-bottom: 10px;
+      padding-left: 20px;
+      font-family: var(--font-mono);
+      font-size: 24px;
+    &:before {
+        content: '▹ ';
+        font-size: 24px;
+        position: absolute;
+        left: 0;
+        color: #53D4BA;
+      }
 `;
 
 const HeroName = styled.h1`
@@ -150,10 +174,15 @@ const hero = () => {
             <SectionHero>
                 <Container>
                     <HeroIntro> Hello, my name is</HeroIntro>
-                    <HeroName>Teo Nys 👋</HeroName>
+                    <HeroName>Teo Nys<span style = {{color: '#53D4BA'}}>/</span>Фёдор Ныс</HeroName>
                     <DescriptionWrap>
                         <HeroDesc>New York City--based developer & designer that cares a lot about creating useful, meaningful, and well-crafted products. I’m currently working on <DescLink> Clarissa AI </DescLink> — an intelligent medical assistant.</HeroDesc>
                         <HeroDesc>Take a look through my work below. If you want to say hi, or chat about a new project — <DescLink href = 'teonys@nyu.edu'>get in touch.</DescLink></HeroDesc>
+                        <ul className = 'skills-list'>
+                            {skills.map((name, i ) => (
+                                <li key = {i}>{name}</li>
+                            ))}
+                        </ul>
                         <StyledSocialList>
                         Connect with me: 
                         {socialMedia.map(({ url, name }, i) => (

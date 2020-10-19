@@ -6,7 +6,7 @@ ${Fonts};
 
 :root {
     --dark-background: #0A192E
-    --green: #53D4BA
+    --green: #53D4BA;
     --slate: #8892b0;
 
     --font-sans: 'Calibre', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
