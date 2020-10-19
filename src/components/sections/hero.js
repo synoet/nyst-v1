@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from 'styled-components'
+import Icon from '../icons/icon.js';
+
+import {socialMedia} from '../../config'
 
 
 const SectionHero = styled.div`
@@ -110,8 +113,32 @@ text-decoration: none;
     -webkit-transform: skew(0deg, 3deg);
     -ms-transform: skew(0deg, 3deg);
     transform: skew(0deg, 3deg);
+`;
 
-
+const StyledSocialList = styled.ul`
+display: flex;
+flex-direction: row;
+align-items: center;
+margin: 0;
+padding: 0;
+list-style: none;
+&:after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 90px;
+  margin: 0 auto;
+}
+li {
+  padding: 10px;
+  a {
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: #8892b0;
+    }
+  }
+}
 `;
 
 const hero = () => {
@@ -124,6 +151,15 @@ const hero = () => {
                     <DescriptionWrap>
                         <HeroDesc>New York City--based developer & designer that cares a lot about creating useful, meaningful, and well-crafted products. I’m currently working on <DescLink> Clarissa AI </DescLink> — an intelligent medical assistant.</HeroDesc>
                         <HeroDesc>Take a look through my work below. If you want to say hi, or chat about a new project — <DescLink href = 'teonys@nyu.edu'>get in touch.</DescLink></HeroDesc>
+                        <StyledSocialList>
+                        {socialMedia.map(({ url, name }, i) => (
+                                <li key={i}>
+                                    <a href={url} aria-label={name}>
+                                    <Icon name={name} />
+                                    </a>
+                                </li>
+                            ))}
+                        </StyledSocialList>
                         <Button>Full Bio & Resume</Button> 
                     </DescriptionWrap>
                 </Container>
@@ -131,4 +167,4 @@ const hero = () => {
     )
 }
 
-export default hero
+export default hero;
