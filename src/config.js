@@ -37,5 +37,7 @@ module.exports = {
             url: '/#contact'
         }
         
-    ]
+    ],
+
+    skills: ['JavaScript (ES6+)', 'React', 'Node.Js', 'Python', 'HTML/CSS', 'C++']
 }

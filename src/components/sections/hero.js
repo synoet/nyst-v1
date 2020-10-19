@@ -70,13 +70,14 @@ const HeroName = styled.h1`
     width: 70%;
     font-size: 82px;
     font-weight: 600;
-    line-height: 20px
+    line-height: 20px;
 `;
 
 const HeroDesc = styled.h2`
 width: 100%;
 font-size: 24px;
 line-height: 40px;
+color: #a8b2d1;
 `;
 
 const Button = styled.button`
@@ -116,6 +117,8 @@ text-decoration: none;
 `;
 
 const StyledSocialList = styled.ul`
+color: #a8b2d1;
+font-size: 21px;
 display: flex;
 flex-direction: row;
 align-items: center;
@@ -152,6 +155,7 @@ const hero = () => {
                         <HeroDesc>New York City--based developer & designer that cares a lot about creating useful, meaningful, and well-crafted products. I’m currently working on <DescLink> Clarissa AI </DescLink> — an intelligent medical assistant.</HeroDesc>
                         <HeroDesc>Take a look through my work below. If you want to say hi, or chat about a new project — <DescLink href = 'teonys@nyu.edu'>get in touch.</DescLink></HeroDesc>
                         <StyledSocialList>
+                        Connect with me: 
                         {socialMedia.map(({ url, name }, i) => (
                                 <li key={i}>
                                     <a href={url} aria-label={name}>
@@ -160,7 +164,7 @@ const hero = () => {
                                 </li>
                             ))}
                         </StyledSocialList>
-                        <Button>Full Bio & Resume</Button> 
+                        {/* <Button>Full Bio & Resume</Button>  */}
                     </DescriptionWrap>
                 </Container>
             </SectionHero>
