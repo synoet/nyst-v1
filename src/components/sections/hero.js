@@ -12,6 +12,7 @@ display: -webkit-flex;
 display: -ms-flexbox;
 display: flex;
 height: 100vh;
+max-height: 100vh;
 margin-top: -74px;
 margin-right: auto;
 margin-left: auto;
@@ -25,7 +26,6 @@ justify-content: center;
 align-items: flex-start;
 background-color: #0a192e;
 font-family: var(--font-mono);
-color: #e8e8e8;
 `;
 
 const Container = styled.div`
@@ -36,7 +36,7 @@ display: -ms-flexbox;
 display: flex;
 width: 100%;
 max-width: 1600px;
-margin-top: 160px;
+margin-top: 10vh;
 margin-right: 40px;
 margin-left: 40px;
 padding-top: 147px;
@@ -59,7 +59,7 @@ align-items: center;
 const HeroIntro = styled.h1`
 width: 70%;
 color: #53d4ba;
-font-size: 24px;
+font-size: var(--fz-xl);
 `;
 
 const DescriptionWrap = styled.div`
@@ -81,6 +81,9 @@ ul.skills-list {
       padding-left: 20px;
       font-family: var(--font-mono);
       font-size: 24px;
+      @media (max-width: 1080px) {
+        font-size: 16px;
+       }
     &:before {
         content: '▹ ';
         font-size: 24px;
@@ -95,6 +98,15 @@ const HeroName = styled.h1`
     font-size: 82px;
     font-weight: 600;
     line-height: 20px;
+    color: var(--white);
+    @media (max-width: 1500px) {
+       font-size: 52px;
+       line-height: 52px;
+      }
+    @media (max-width: 720px) {
+    font-size: 42px;
+    line-height: 42px;
+    }
 `;
 
 const HeroDesc = styled.h2`
@@ -102,6 +114,9 @@ width: 100%;
 font-size: 24px;
 line-height: 40px;
 color: #a8b2d1;
+@media (max-width: 1080px) {
+    font-size: 18px;
+   }
 `;
 
 const Button = styled.button`
@@ -149,6 +164,9 @@ align-items: center;
 margin: 0;
 padding: 0;
 list-style: none;
+@media (max-width: 1080px) {
+    font-size: 16px;
+   }
 &:after {
   content: '';
   display: block;

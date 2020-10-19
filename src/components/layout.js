@@ -6,7 +6,7 @@ import Nav from '../components/nav.js'
 import GlobalStyles from '../styles/GlobalStyle'
 
 const StyledContent = styled.div`
-font-family: var(--font-mono);
+font-family: var(--font--mono);
 `;
 
 
