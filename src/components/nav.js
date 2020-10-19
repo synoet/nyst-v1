@@ -10,6 +10,7 @@ const StyledHeader = styled.header`
 `;
 
 const StyledNav = styled.nav`
+padding-left: 10rem;
 position: -webkit-sticky;
 position: sticky;
 top: 0px;
@@ -48,7 +49,17 @@ padding-right: 10rem;
 `;
 
 const LogoWrap = styled.div`
-padding-left: 10rem;
+display: block;
+background-color: rgba(255, 205, 0, 0);
+-webkit-transition: all 300ms cubic-bezier(.23, 1, .32, 1);
+transition: all 300ms cubic-bezier(.23, 1, .32, 1);
+:hover{
+    position: static;
+    overflow: visible;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
 `;
 const NavContent = styled.div`
 display: -webkit-box;
