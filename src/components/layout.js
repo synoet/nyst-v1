@@ -5,6 +5,7 @@ import Hero from '../components/sections/hero.js'
 import Nav from '../components/nav.js'
 import GlobalStyles from '../styles/GlobalStyle'
 import Experience from '../components/sections/experience'
+import About from '../components/sections/about'
 
 import Loader from '../components/loader.js'
 
@@ -31,6 +32,7 @@ const Layout = () => {
                 <StyledContent>
                     <Nav></Nav>
                     <Hero></Hero>
+                    <About></About>
                     <Experience></Experience>
                 </StyledContent>
 
