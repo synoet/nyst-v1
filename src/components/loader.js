@@ -3,6 +3,16 @@ import styled, {css} from 'styled-components';
 import LoaderIcon from './icons/loader';
 
 const LoaderContainer = styled.div`
+font-family: var(--font--mono);
+animation: fadeIn ease 4s;
+@keyframes fadeIn{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 position: fixed;
 top: 45%;
 bottom: 0;
