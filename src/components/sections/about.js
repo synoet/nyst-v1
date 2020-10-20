@@ -36,9 +36,13 @@ justify-content: center;
 align-items: center;
 .inner {
 width: 70%;
-display: grid;
-grid-template-columns: 1fr 4fr;
-grid-gap: 50px;
+
+@media (min-width: 1200px) {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 50px;
+   }
+
 }
 
 h3 {
