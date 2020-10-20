@@ -6,7 +6,7 @@
 
 module.exports = {
   /* Your site config here */
-  siteMetaData: {
+  siteMetadata: {
     title: 'Teo Nys',
     description: 'Teo Nys Personal Website',
     author: '@nysteo',
@@ -15,12 +15,12 @@ module.exports = {
     {
       resolve: 'gatsby-source-strapi',
       options: {
-        apiURL: 'http://localhost:1137',
-        contentTypes: [
+        apiURL: 'http://localhost:1337',
+        contentTypes: [ // List of the Content Types you want to be able to request from Gatsby.
           'Experience'
         ],
         queryLimit: 1000,
-      }
+      },
     },
     'gatsby-plugin-offline',
   ],
