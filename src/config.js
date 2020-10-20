@@ -24,21 +24,21 @@ module.exports = {
             name: 'Experience',
             url: '/#jobs',
         },
-        {
-            name: 'Work',
-            url: '/#projects'
-        },
-        {
-            name: 'Blog',
-            url: '/#blog'
-        },
-        {
-            name: 'Contact',
-            url: '/#contact'
-        },
+        // {
+        //     name: 'Work',
+        //     url: '/#projects'
+        // },
+        // {
+        //     name: 'Blog',
+        //     url: '/#blog'
+        // },
+        // {
+        //     name: 'Contact',
+        //     url: '/#contact'
+        // },
         {
             name: 'Resume',
-            url: '/#resume'
+            url: '/resume.pdf'
         }
     ],
 

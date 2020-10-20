@@ -85,13 +85,14 @@ align-items: center;
 flex: 1;
 `;
 
-const NavLink = styled.p`
+const NavLink = styled.a`
 padding: 9px 24px;
 color: #f7f7f7;
 font-size: 14px;
 line-height: 24px;
 font-weight: 400;
 letter-spacing: 0.25px;
+text-decoration: none;
 :hover {
     color: #53D4BA;
     border-bottom-color: transparent;
@@ -128,7 +129,7 @@ const Nav = () => {
                         <LogoWrap><Logo /></LogoWrap>
                         {windowDimensions.width >= 900 ? (                        <NavWrap>
                             {navLinks.map(({url, name}, index) => (
-                                <NavLink>{index + 1}. {name}</NavLink>
+                                <NavLink href = {url}>{index + 1}. {name}</NavLink>
                             ))}
                         </NavWrap>) : ('@nysteo')
                         }

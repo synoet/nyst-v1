@@ -112,6 +112,7 @@ const Experience = () => {
                     position
                     company
                     dates
+                    link
                     Description {
                     id
                     desc1
@@ -132,7 +133,7 @@ const Experience = () => {
                     {experienceData.map((select, index) => {
                         return (
                             <TabContent>
-                                <h3>{select.node.position} <a className = 'company'>{select.node.company}</a></h3>
+                                <h3>{select.node.position} <a href = {select.node.link} className = 'company'>{select.node.company}</a></h3>
                                 <p className = 'range'>{select.node.dates}</p>
                                 <ul>
                                     
