@@ -21,7 +21,7 @@ const Loader = ({finishLoading}) => {
     const timeout = setTimeout(() => setIsMounted(true), 5);
     setTimeout(() => {
         finishLoading()
-    }, 6000)
+    }, 4000)
     return () => clearTimeout(timeout);
   }, []);
 
