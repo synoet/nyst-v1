@@ -50,6 +50,21 @@ const SectionTitle = styled.div`
 width: 70%;
 font-size: 20px;
 color: var(--white);
+line-height: 50px;
+padding-bottom: 10px;
+display: flex;
+align-items: center;
+position: relative;
+white-space: nowrap;
+&:after {
+    content: '';
+    display: block;
+    position: relative;
+    width: 400px;
+    height: 1px;
+    margin-left: 20px;
+    background-color: var(--slate);
+}
 `;
 
 const TabContent = styled.div`
