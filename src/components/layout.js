@@ -4,6 +4,7 @@ import styled, { ThemeProvider } from 'styled-components';
 import Hero from '../components/sections/hero.js'
 import Nav from '../components/nav.js'
 import GlobalStyles from '../styles/GlobalStyle'
+import Experience from '../components/sections/experience'
 
 import Loader from '../components/loader.js'
 
@@ -30,6 +31,7 @@ const Layout = () => {
                 <StyledContent>
                     <Nav></Nav>
                     <Hero></Hero>
+                    <Experience></Experience>
                 </StyledContent>
 
 

@@ -100,6 +100,11 @@ ul.skills-list {
         color: #53D4BA;
       }
 `;
+const SectionTitle = styled.div`
+width: 70%;
+font-size: 20px;
+color: var(--white);
+`;
 
 const HeroName = styled.h1`
     width: 70%;
@@ -205,6 +210,7 @@ const Hero = () => {
 
             <SectionHero>
                 <Container>
+                    <SectionTitle>1. About</SectionTitle>
                     <HeroIntro> Hello, my name is</HeroIntro>
                     <HeroName>Teo Nys<span style = {{color: '#53D4BA'}}>/</span>Фёдор Ныс</HeroName>
                     <DescriptionWrap>
