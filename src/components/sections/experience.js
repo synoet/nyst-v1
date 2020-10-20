@@ -39,7 +39,7 @@ width: 70%;
 `;
 
 const TabList = styled.ul`
-width: 70%;
+width: 90%;
 list-style: none;
 `;
 
@@ -62,6 +62,7 @@ ul{
     li {
       position: relative;
       padding-left: 30px;
+      font-size: 18px;
       color: var(--white);
       margin-bottom: 10px;
       &:before {
@@ -109,7 +110,7 @@ const Experience = () => {
                 edges {
                 node {
                     position
-                    Company
+                    company
                     dates
                     Description {
                     id
@@ -131,7 +132,7 @@ const Experience = () => {
                     {experienceData.map((select, index) => {
                         return (
                             <TabContent>
-                                <h3>{select.node.position} <a className = 'company'>{select.node.Company}</a></h3>
+                                <h3>{select.node.position} <a className = 'company'>{select.node.company}</a></h3>
                                 <p className = 'range'>{select.node.dates}</p>
                                 <ul>
                                     
