@@ -9,6 +9,15 @@ import Loader from '../components/loader.js'
 
 const StyledContent = styled.div`
 font-family: var(--font--mono);
+animation: fadeIn ease 3s;
+@keyframes fadeIn{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 `;
 
 
@@ -22,6 +31,7 @@ const Layout = () => {
                     <Nav></Nav>
                     <Hero></Hero>
                 </StyledContent>
+
 
             )}
 
