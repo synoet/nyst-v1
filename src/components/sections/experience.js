@@ -32,6 +32,9 @@ justify-content: center;
 -webkit-align-items: center;
 -ms-flex-align: center;
 align-items: center;
+@media (max-width: 1100px) {
+    margin-top 7vh;
+   }
 `;
 
 const ExperienceWrap = styled.div`
