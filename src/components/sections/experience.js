@@ -7,7 +7,6 @@ const ExperienceSection = styled.div`
 display: flex;
 justify-content: center;
 background-color: var(--dark-background);
-height: 50vh;
 align-items: flex-start;
 `;
 
@@ -18,6 +17,7 @@ display: -webkit-flex;
 display: -ms-flexbox;
 display: flex;
 width: 100%;
+padding-bottom: 5rem;
 max-width: 1600px;
 -webkit-box-orient: vertical;
 -webkit-box-direction: normal;
@@ -40,7 +40,7 @@ width: 70%;
 
 const TabList = styled.ul`
 width: 70%;
-list-style = none;
+list-style: none;
 `;
 
 const SectionTitle = styled.div`
@@ -49,6 +49,58 @@ font-size: 20px;
 color: var(--white);
 `;
 
+const TabContent = styled.div`
+width: 100%;
+height: auto;
+padding-top: 10px;
+padding-left: 30px;
+ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: var(--fz-lg);
+    li {
+      position: relative;
+      padding-left: 30px;
+      color: var(--white);
+      margin-bottom: 10px;
+      &:before {
+        content: '▹';
+        position: absolute;
+        left: 0;
+        color: var(--green);
+      }
+    }
+}
+h3 {
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: var(--white);
+  .company {
+    color: var(--green);
+    color: #53d4ba;
+    display: inline-block;
+    border-bottom: 3px solid #e0e0e0;
+    text-decoration: none;
+    &:before {
+        content: '@';
+    }
+
+    :hover {
+        border-bottom-color: transparent;
+        -webkit-transform: skew(0deg, 3deg);
+        -ms-transform: skew(0deg, 3deg);
+        transform: skew(0deg, 3deg);
+
+    
+}
+.range {
+  margin-bottom: 30px;
+  color: var(--light-slate);
+  font-family: var(--font-mono);
+  font-size: var(--fz-xs);
+}
+`;
 
 const Experience = () => {
     const data = useStaticQuery(graphql`
@@ -77,11 +129,24 @@ const Experience = () => {
                 <ExperienceWrap>
                     <TabList>
                     {experienceData.map((select, index) => {
-                    return (
-                        <li>{select.node.Company}</li>
-                    )
-                
-                })}
+                        return (
+                            <TabContent>
+                                <h3>{select.node.position} <a className = 'company'>{select.node.Company}</a></h3>
+                                <p className = 'range'>{select.node.dates}</p>
+                                <ul>
+                                    
+                                        {select.node.Description.map((desc, index) => {
+                                            return (
+                                                <li>{desc.desc1}</li>
+
+                                            )
+                                        })}
+                                </ul>
+
+                            </TabContent>
+
+                        )
+                    })}
 
                     </TabList>
 
