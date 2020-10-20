@@ -56,7 +56,7 @@ const TabContent = styled.div`
 width: 100%;
 height: auto;
 padding-top: 10px;
-padding-left: 30px;
+// padding-left: 30px;
 ul{
     padding: 0;
     margin: 0;

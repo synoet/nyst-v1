@@ -210,7 +210,7 @@ const Hero = () => {
 
             <SectionHero>
                 <Container>
-                    <SectionTitle>1. About</SectionTitle>
+                    {/* <SectionTitle>1. About</SectionTitle> */}
                     <HeroIntro> Hello, my name is</HeroIntro>
                     <HeroName>Teo Nys<span style = {{color: '#53D4BA'}}>/</span>Фёдор Ныс</HeroName>
                     <DescriptionWrap>

@@ -42,5 +42,10 @@ module.exports = {
         }
     ],
 
-    skills: ['JavaScript', 'React', 'Node.Js', 'Python', 'HTML/CSS', 'C++', 'GraphQL', 'Express']
+    skills: ['JavaScript', 'React', 'Node.Js', 'Python', 'HTML/CSS', 'C++', 'GraphQL', 'Express'],
+    Languages: ['English (Native Speaker)', 'Russian (Native Speaker)', 'German(Fluent)'],
+    allSkills: ['Python', 'Node.js', 'Javascript', 'React', 'Gatsby', 'Elm', 'TypeScript', 'FastAPI', 'Flask'],
+    tools: ['Git', 'Docker', 'SQLAlchemy', 'GraphQL', 'IPython', 'Pandas', 'NumPy', 'OpenCV', 'Jupyter', 'Google Cloud Platform'],
+    creativeTools: ['Figma', 'Sketch', 'Adobe Photoshop', 'Adobe Illustrator', 'Zeppellin']
+
 }
