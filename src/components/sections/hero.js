@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import styled from 'styled-components'
 import Icon from '../icons/icon.js';
 
 import {socialMedia} from '../../config'
 import {skills} from '../../config'
+import WindowDimensions from '../WindowDimension';
+import useWindowDimensions from '../WindowDimension';
 
 
 const SectionHero = styled.div`
@@ -57,6 +59,9 @@ align-items: center;
 @media (max-width: 1080px) {
     margin-top 7vh;
    }
+@media (max-width: 800px) {
+    margin-top: 0vh;
+}
 `;
 
 const HeroIntro = styled.h1`
@@ -204,7 +209,10 @@ li {
 }
 `;
 
-const hero = () => {
+
+
+const Hero = () => {
+
     return (
 
             <SectionHero>
@@ -236,4 +244,4 @@ const hero = () => {
     )
 }
 
-export default hero;
+export default Hero;

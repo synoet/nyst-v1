@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import styled, {css} from 'styled-components';
@@ -31,6 +31,10 @@ background-color: #0a192e;
 font-family: var(--font-mono);
 color: #fff;
 font-size: 17px;
+@media (max-width: 800px) {
+    padding-left: 15vw;
+    padding-right: 20vw;
+    }
 
 
 `;
@@ -97,21 +101,42 @@ letter-spacing: 0.25px;
 
 `;
 
-const nav = () => {
+function getWindowDimensions() {
+    const { innerWidth: width, innerHeight: height } = window;
+    return {
+      width,
+      height
+    };
+  }
+
+const Nav = () => {
+    const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+
+    useEffect(() => {
+        function handleResize() {
+            setWindowDimensions(getWindowDimensions());
+          }
+      
+          window.addEventListener('resize', handleResize);
+          return () => window.removeEventListener('resize', handleResize);
+    })
+
     return (
         <StyledHeader>
             <StyledNav>
                     <NavContent>
                         <LogoWrap><Logo /></LogoWrap>
-                        <NavWrap>
+                        {windowDimensions.width >= 900 ? (                        <NavWrap>
                             {navLinks.map(({url, name}, index) => (
                                 <NavLink>{index + 1}. {name}</NavLink>
                             ))}
-                        </NavWrap>
+                        </NavWrap>) : ('@nysteo')
+                        }
+
                     </NavContent>
             </StyledNav> 
         </StyledHeader>
     )
 }
 
-export default nav
+export default Nav
