@@ -41,6 +41,7 @@ width: 70%;
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-gap: 50px;
+    margin-top 5vh;
    }
 
 }

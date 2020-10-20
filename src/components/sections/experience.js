@@ -33,7 +33,7 @@ justify-content: center;
 -ms-flex-align: center;
 align-items: center;
 @media (max-width: 1100px) {
-    margin-top 7vh;
+    margin-top 10vh;
    }
 `;
 
