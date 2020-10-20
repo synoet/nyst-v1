@@ -89,18 +89,6 @@ ul.skills-list {
       padding-left: 20px;
       font-family: var(--font-mono);
       font-size: 24px;
-      :hover {
-          animation: highlight 1000ms ease-out
-      }
-
-      @keyframes highlight {
-          0% {
-              background-color: var(--green);
-            }
-          100% {
-              background-color: var(--green);
-          }
-      }
       @media (max-width: 1080px) {
         font-size: 16px;
        }

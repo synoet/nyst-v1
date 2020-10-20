@@ -6,5 +6,22 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  siteMetaData: {
+    title: 'Teo Nys',
+    description: 'Teo Nys Personal Website',
+    author: '@nysteo',
+  },
+  plugins: [
+    {
+      resolve: 'gatsby-source-strapi',
+      options: {
+        apiURL: 'http://localhost:1137',
+        contentTypes: [
+          'Experience'
+        ],
+        queryLimit: 1000,
+      }
+    },
+    'gatsby-plugin-offline',
+  ],
 }
