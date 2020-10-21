@@ -191,6 +191,13 @@ const About = () => {
                         <li key = {i}>{name}</li>
                     ))}
                 </ul>
+                <h3>Tools: </h3>
+                <ul className = 'list'>
+                    {tools.map((name, i ) => (
+                        <li key = {i}>{name}</li>
+                    ))}
+                </ul>
+
                 <h3>Creative Tools: </h3>
                 <ul className = 'list'>
                     {creativeTools.map((name, i ) => (
