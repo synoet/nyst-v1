@@ -7,7 +7,10 @@ import GlobalStyles from '../styles/GlobalStyle'
 import Experience from '../components/sections/experience'
 import About from '../components/sections/about'
 
+import Helmet from 'react-helmet'
+
 import Loader from '../components/loader.js'
+import favicon from '../images/favicon.ico'
 
 const StyledContent = styled.div`
 font-family: var(--font--mono);
@@ -26,7 +29,12 @@ animation: fadeIn ease 3s;
 const Layout = () => {
     const [isLoading, setIsLoading] = useState(true)
     return (
+
         <div id = 'root'>
+            <Helmet>
+                <link rel="icon" href={favicon} />
+                <title>Teo Nys</title>
+            </Helmet>
             <GlobalStyles/>
             {isLoading ? (<Loader finishLoading = {() => setIsLoading(false)} />) : (
                 <StyledContent>
