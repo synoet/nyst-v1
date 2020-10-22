@@ -39,7 +39,6 @@ const Layout = () => {
 
     return (
         <div id = 'root'>
-            <a onClick = {() => scrollTo("#about")}> Hello</a>
             <Helmet>
                 <link rel="icon" href={favicon} />
                 <title>Teo Nys</title>
