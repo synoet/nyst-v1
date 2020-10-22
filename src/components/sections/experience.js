@@ -143,7 +143,7 @@ const Experience = () => {
     const experienceData = data.allStrapiExperience.edges;
     console.log(experienceData);
     return (
-        <ExperienceSection>
+        <ExperienceSection id = 'experience'>
             <Container>
                 <SectionTitle> 2. Experience</SectionTitle>
                 <ExperienceWrap>

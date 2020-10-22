@@ -110,7 +110,7 @@ function getWindowDimensions() {
     };
   }
 
-const Nav = () => {
+const Nav = (props) => {
     const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
 
     useEffect(() => {
@@ -122,6 +122,10 @@ const Nav = () => {
           return () => window.removeEventListener('resize', handleResize);
     })
 
+    const logUrl = (url) => {
+      props.handleScroll(url)
+    }
+
     return (
         <StyledHeader>
             <StyledNav>
@@ -129,7 +133,7 @@ const Nav = () => {
                         <LogoWrap><Logo /></LogoWrap>
                         {windowDimensions.width >= 900 ? (                        <NavWrap>
                             {navLinks.map(({url, name}, index) => (
-                                <NavLink href = {url}>{index + 1}. {name}</NavLink>
+                                <NavLink onClick = {() => logUrl(url)} >{index + 1}. {name}</NavLink>
                             ))}
                         </NavWrap>) : ('@nysteo')
                         }

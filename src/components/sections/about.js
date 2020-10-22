@@ -167,7 +167,7 @@ white-space: nowrap;
 
 const About = () => {
     return (
-        <AboutSection id = 'About'>
+        <AboutSection id = 'about'>
             <Container>
                 <SectionTitle> 1. About</SectionTitle>
                 <div className = 'inner'>

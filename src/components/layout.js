@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, createRef} from 'react';
 import PropTypes from 'prop-types';
 import styled, { ThemeProvider } from 'styled-components';
 import Hero from '../components/sections/hero.js'
@@ -11,6 +11,8 @@ import Helmet from 'react-helmet'
 
 import Loader from '../components/loader.js'
 import favicon from '../images/favicon.ico'
+
+import scrollTo from 'gatsby-plugin-smoothscroll';
 
 const StyledContent = styled.div`
 font-family: var(--font--mono);
@@ -26,11 +28,18 @@ animation: fadeIn ease 3s;
 `;
 
 
+
+
 const Layout = () => {
     const [isLoading, setIsLoading] = useState(true)
-    return (
 
+    const handleScroll = (id) => {
+        scrollTo(id)
+    }
+
+    return (
         <div id = 'root'>
+            <a onClick = {() => scrollTo("#about")}> Hello</a>
             <Helmet>
                 <link rel="icon" href={favicon} />
                 <title>Teo Nys</title>
@@ -38,10 +47,11 @@ const Layout = () => {
             <GlobalStyles/>
             {isLoading ? (<Loader finishLoading = {() => setIsLoading(false)} />) : (
                 <StyledContent>
-                    <Nav></Nav>
+                    <Nav handleScroll = {handleScroll}>
+                    </Nav>
                     <Hero></Hero>
                     <About></About>
-                    <Experience></Experience>
+                    <Experience id = 'experience'></Experience>
                 </StyledContent>
 
 
