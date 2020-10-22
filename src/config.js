@@ -21,6 +21,10 @@ module.exports = {
             url: '#about',
         },
         {
+            name: 'Skills/Stats',
+            url: '#skills'
+        },
+        {
             name: 'Experience',
             url: '#experience',
         },
@@ -43,9 +47,9 @@ module.exports = {
     ],
 
     skills: ['JavaScript', 'React', 'Node.Js', 'Python', 'HTML/CSS', 'C++', 'GraphQL', 'Express'],
-    Languages: ['English (Native Speaker)', 'Russian (Native Speaker)', 'German(Fluent)'],
+    Languages: ['English ', 'Russian', 'German'],
     allSkills: ['Python', 'Node.js', 'Javascript', 'React', 'Gatsby', 'Elm', 'TypeScript', 'FastAPI', 'Flask'],
-    tools: ['Git', 'Docker', 'SQLAlchemy', 'GraphQL', 'IPython', 'Pandas', 'NumPy', 'OpenCV', 'Jupyter', 'Google Cloud Platform'],
-    creativeTools: ['Figma', 'Sketch', 'Adobe Photoshop', 'Adobe Illustrator', 'Zeppellin']
+    tools: ['Git', 'Docker', 'SQLAlchemy', 'GraphQL', 'IPython', 'Pandas', 'NumPy', 'OpenCV', 'Jupyter'],
+    creativeTools: ['Figma', 'Sketch', 'Photoshop', 'Illustrator']
 
 }

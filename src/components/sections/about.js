@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import {useStaticQuery, graphql} from 'gatsby'
 import styled from 'styled-components'
 import me from '../../images/me.png'
@@ -166,6 +166,8 @@ white-space: nowrap;
 
 
 const About = () => {
+    const page = 1;
+    const username = 'nysteo'
     return (
         <AboutSection id = 'about'>
             <Container>
@@ -178,32 +180,6 @@ const About = () => {
                         <p>When I'm not working on Projects, Work or Uni, I enjoy reading, playing Video Games, Designing, and walking my dog <a href = "https://en.wikipedia.org/wiki/Shiba_Inu" className = 'highlight'>Korra</a> </p>
                     </AboutText>
                 </div>
-                {/* <SectionTitle> 1.1 Skills & misc</SectionTitle>
-                <h3>Languages: </h3>
-                <ul className = 'list'>
-                    {Languages.map((name, i ) => (
-                        <li key = {i}>{name}</li>
-                    ))}
-                </ul>
-                <h3>Technical Skills: </h3>
-                <ul className = 'list'>
-                    {allSkills.map((name, i ) => (
-                        <li key = {i}>{name}</li>
-                    ))}
-                </ul>
-                <h3>Tools: </h3>
-                <ul className = 'list'>
-                    {tools.map((name, i ) => (
-                        <li key = {i}>{name}</li>
-                    ))}
-                </ul>
-
-                <h3>Creative Tools: </h3>
-                <ul className = 'list'>
-                    {creativeTools.map((name, i ) => (
-                        <li key = {i}>{name}</li>
-                    ))}
-                </ul> */}
             </Container>
         </AboutSection>
     )

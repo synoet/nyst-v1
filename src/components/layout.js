@@ -6,7 +6,7 @@ import Nav from '../components/nav.js'
 import GlobalStyles from '../styles/GlobalStyle'
 import Experience from '../components/sections/experience'
 import About from '../components/sections/about'
-
+import Skills from '../components/sections/Skills'
 import Helmet from 'react-helmet'
 
 import Loader from '../components/loader.js'
@@ -50,7 +50,8 @@ const Layout = () => {
                     </Nav>
                     <Hero></Hero>
                     <About></About>
-                    <Experience id = 'experience'></Experience>
+                    <Skills></Skills>
+                    <Experience></Experience>
                 </StyledContent>
 
 
