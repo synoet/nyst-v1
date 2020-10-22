@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import styled from 'styled-components'
 import {Languages, allSkills, tools, creativeTools} from '../../config'
+import anime from 'animejs'
 
 
 const SkillsSection = styled.div`
@@ -55,28 +56,27 @@ p {
 }
 h3 {
     color: var(--white);
-    font-size: 18px;
+    font-size: 20px;
     margin-top: 1rem;
 }
 ul.list {
-    width: 70%;
     display: grid;
-    grid-template-columns: repeat(6, minmax(140px, 200px));
+    grid-template-columns: repeat(6, minmax(140px, 250px));
     overflow: hidden;
     list-style: none;
     color: #8892b0;
     li {
       position: relative;
-      padding-left: 20px;
+      padding-left: 30px;
       padding-top: 10px;
       font-family: var(--font-mono);
-      font-size: 18px;
+      font-size: 20px;
       @media (max-width: 1080px) {
         font-size: 16px;
        }
     &:before {
         content: '▹ ';
-        font-size: 18px;
+        font-size: 20px;
         position: absolute;
         left: 0;
         color: #53D4BA;
@@ -119,7 +119,7 @@ const Skills = () => {
                     <h3>Languages: </h3>
                     <ul className = 'list'>
                         {Languages.map((name, i ) => (
-                            <li key = {i}>{name}</li>
+                            <li className = 'skills' key = {i}>{name}</li>
                         ))}
                     </ul>
                     <h3>Technical Skills: </h3>
