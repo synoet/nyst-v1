@@ -19,6 +19,7 @@ display: -webkit-flex;
 display: -ms-flexbox;
 display: flex;
 width: 100%;
+margin-top: 2rem;
 padding-bottom: 5rem;
 max-width: 1600px;
 -webkit-box-orient: vertical;
@@ -36,7 +37,6 @@ justify-content: center;
 align-items: center;
 .inner {
 width: 70%;
-
 @media (min-width: 1200px) {
     display: grid;
     grid-template-columns: 1fr 4fr;

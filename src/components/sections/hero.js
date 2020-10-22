@@ -31,14 +31,14 @@ font-family: var(--font-mono);
 `;
 
 const Container = styled.div`
-font-size: 22px;
+font-size: 20em;
 display: -webkit-box;
 display: -webkit-flex;
 display: -ms-flexbox;
 display: flex;
 width: 100%;
 max-width: 1600px;
-margin-top: 10vh;
+margin-top: 6rem;
 margin-right: 40px;
 margin-left: 40px;
 padding-top: 147px;
@@ -56,18 +56,19 @@ justify-content: center;
 -webkit-align-items: center;
 -ms-flex-align: center;
 align-items: center;
-@media (max-width: 1080px) {
-    margin-top 7vh;
+@media (max-width: 1600px) {
+    margin-top 2rem;
+    font-size: 16px;
    }
-@media (max-width: 800px) {
-    margin-top: 0vh;
-}
 `;
 
 const HeroIntro = styled.h1`
 width: 70%;
 color: #53d4ba;
 font-size: var(--fz-xl);
+@media (max-width: 1580px) {
+    font-size: 16px;
+   }
 `;
 
 const DescriptionWrap = styled.div`
@@ -89,7 +90,7 @@ ul.skills-list {
       padding-left: 20px;
       font-family: var(--font-mono);
       font-size: 24px;
-      @media (max-width: 1080px) {
+      @media (max-width: 1580px) {
         font-size: 16px;
        }
     &:before {
@@ -127,8 +128,8 @@ width: 100%;
 font-size: 24px;
 line-height: 40px;
 color: #a8b2d1;
-@media (max-width: 1080px) {
-    font-size: 18px;
+@media (max-width: 1580px) {
+    font-size: 16px;
    }
 `;
 
