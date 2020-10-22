@@ -11,7 +11,7 @@ import Helmet from 'react-helmet'
 import Work from '../components/sections/Work'
 import Loader from '../components/loader.js'
 import favicon from '../images/favicon.ico'
-
+import Contact from '../components/sections/contact'
 import scrollTo from 'gatsby-plugin-smoothscroll';
 
 const StyledContent = styled.div`
@@ -53,6 +53,7 @@ const Layout = () => {
                     <Skills></Skills>
                     <Experience></Experience>
                     <Work></Work> 
+                    <Contact></Contact>
                 </StyledContent>
 
 

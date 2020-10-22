@@ -36,10 +36,10 @@ module.exports = {
         //     name: 'Blog',
         //     url: '/#blog'
         // },
-        // {
-        //     name: 'Contact',
-        //     url: '/#contact'
-        // },
+        {
+            name: 'Contact',
+            url: '#contact'
+        },
         {
             name: 'Resume',
             url: '/resume.pdf'
