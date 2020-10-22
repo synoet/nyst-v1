@@ -216,7 +216,7 @@ const Hero = () => {
                     <HeroName>Teo Nys<span style = {{color: '#53D4BA'}}>/</span>Фёдор Ныс</HeroName>
                     <DescriptionWrap>
                         <HeroDesc>New York City--based developer & designer that cares a lot about creating useful, meaningful, and well-crafted products. I’m currently working on <DescLink href = 'http://www.clarissa.ai'> Clarissa AI </DescLink> — an intelligent medical assistant.</HeroDesc>
-                        <HeroDesc>Take a look through my work below. If you want to say hi, or chat about a new project — <DescLink href = 'teonys@nyu.edu'>get in touch.</DescLink></HeroDesc>
+                        <HeroDesc>Take a look through my work below. If you want to say hi, or chat about a new project — <DescLink href = 'mailto:teonys@nyu.edu'>get in touch.</DescLink></HeroDesc>
                         <ul className = 'skills-list'>
                             {skills.map((name, i ) => (
                                 <li key = {i}>{name}</li>
