@@ -99,8 +99,28 @@ text-decoration: none;
     -webkit-transform: skew(0deg, 3deg);
     -ms-transform: skew(0deg, 3deg);
     transform: skew(0deg, 3deg);
-
 `;
+
+const ResumeLink = styled.a`
+color: var(--green);
+background-color: transparent;
+border: 1px solid var(--green);
+// border-radius: 15px;
+padding: 0.75rem 1rem;
+font-size: 16px;
+text-decoration: none;
+cursor: pointer;
+transition: var(--transition);
+&:hover,
+&:focus,
+&:active {
+  background-color: var(--green-tint);
+}
+&:after {
+  display: none !important;
+}
+`;
+
 
 function getWindowDimensions() {
     const { innerWidth: width, innerHeight: height } = window;
@@ -135,6 +155,7 @@ const Nav = (props) => {
                             {navLinks.map(({url, name}, index) => (
                                 <NavLink onClick = {() => logUrl(url)} >{index + 1}. {name}</NavLink>
                             ))}
+                            <ResumeLink href = 'nysteo_resume.pdf' download>Resume</ResumeLink>
                         </NavWrap>) : ('@nysteo')
                         }
 

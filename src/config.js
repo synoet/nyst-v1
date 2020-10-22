@@ -40,10 +40,6 @@ module.exports = {
             name: 'Contact',
             url: '#contact'
         },
-        {
-            name: 'Resume',
-            url: '/resume.pdf'
-        }
     ],
 
     skills: ['JavaScript', 'React', 'Node.Js', 'Python', 'HTML/CSS', 'C++', 'GraphQL', 'Express'],
