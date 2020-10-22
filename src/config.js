@@ -28,10 +28,10 @@ module.exports = {
             name: 'Experience',
             url: '#experience',
         },
-        // {
-        //     name: 'Work',
-        //     url: '/#projects'
-        // },
+        {
+            name: 'Work',
+            url: '#work'
+        },
         // {
         //     name: 'Blog',
         //     url: '/#blog'
@@ -50,6 +50,7 @@ module.exports = {
     Languages: ['English ', 'Russian', 'German'],
     allSkills: ['Python', 'Node.js', 'Javascript', 'React', 'Gatsby', 'Elm', 'TypeScript', 'FastAPI', 'Flask'],
     tools: ['Git', 'Docker', 'SQLAlchemy', 'GraphQL', 'IPython', 'Pandas', 'NumPy', 'OpenCV', 'Jupyter'],
-    creativeTools: ['Figma', 'Sketch', 'Photoshop', 'Illustrator']
+    creativeTools: ['Figma', 'Sketch', 'Photoshop', 'Illustrator'],
+    awards: ['Semi Finalist | NYU Engineering InnoVention Competition']
 
 }

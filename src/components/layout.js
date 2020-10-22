@@ -8,7 +8,7 @@ import Experience from '../components/sections/experience'
 import About from '../components/sections/about'
 import Skills from '../components/sections/Skills'
 import Helmet from 'react-helmet'
-
+import Work from '../components/sections/Work'
 import Loader from '../components/loader.js'
 import favicon from '../images/favicon.ico'
 
@@ -52,6 +52,7 @@ const Layout = () => {
                     <About></About>
                     <Skills></Skills>
                     <Experience></Experience>
+                    <Work></Work> 
                 </StyledContent>
 
 

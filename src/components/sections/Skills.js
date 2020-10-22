@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import styled from 'styled-components'
-import {Languages, allSkills, tools, creativeTools} from '../../config'
+import {Languages, allSkills, tools, creativeTools, awards} from '../../config'
 import anime from 'animejs'
 
 

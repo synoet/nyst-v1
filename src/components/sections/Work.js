@@ -1,9 +1,8 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import {useStaticQuery, graphql} from 'gatsby'
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-
-const ExperienceSection = styled.div`
+const WorkSection = styled.div`
 display: flex;
 justify-content: center;
 background-color: var(--dark-background);
@@ -34,16 +33,11 @@ justify-content: center;
 align-items: center;
 @media (max-width: 1100px) {
     margin-top 10vh;
-   }
+}
 `;
 
-const ExperienceWrap = styled.div`
+const WorkWrap = styled.div`
 width: 70%;
-`;
-
-const TabList = styled.ul`
-width: 90%;
-list-style: none;
 `;
 
 const SectionTitle = styled.div`
@@ -66,8 +60,11 @@ white-space: nowrap;
     background-color: var(--slate);
 }
 `;
-
-const TabContent = styled.div`
+const WorkList = styled.ul`
+width: 90%;
+list-style: none;
+`; 
+const WorkContent = styled.div`
 width: 100%;
 height: auto;
 padding-top: 10px;
@@ -121,61 +118,54 @@ h3 {
 }
 `;
 
-const Experience = () => {
+
+const Work = () => {
+
     const data = useStaticQuery(graphql`
         query {
-            allStrapiExperience {
+            allStrapiWork {
                 edges {
-                node {
-                    position
-                    company
-                    dates
-                    link
+                  node {
+                    Title
+                    Tools
                     Description {
-                    id
-                    desc1
+                      desc1
                     }
+                  }
                 }
-                }
-            }
+              }
         }
-    `);
-    const experienceData = data.allStrapiExperience.edges;
-
+    `)
+    const WorkData = data.allStrapiWork.edges;
+    console.log(WorkData)
     return (
-        <ExperienceSection id = 'experience'>
-            <Container>
-                <SectionTitle> 3. Experience</SectionTitle>
-                <ExperienceWrap>
-                    <TabList>
-                    {experienceData.map((select, index) => {
+        <WorkSection id = 'work'>
+          <Container>
+            <SectionTitle>4. Work</SectionTitle>
+            <WorkWrap>
+              <WorkList>
+              {WorkData.map((select, index) => {
+                return (
+                  <WorkContent>
+                    <h3>{select.node.Title}</h3>
+                    <p className = 'range'>{select.node.Tools}</p>
+                    <ul>
+                      {select.node.Description.map((desc, index) => {
                         return (
-                            <TabContent>
-                                <h3>{select.node.position} <a href = {select.node.link} className = 'company'>{select.node.company}</a></h3>
-                                <p className = 'range'>{select.node.dates}</p>
-                                <ul>
-                                    
-                                        {select.node.Description.map((desc, index) => {
-                                            return (
-                                                <li>{desc.desc1}</li>
-
-                                            )
-                                        })}
-                                </ul>
-
-                            </TabContent>
-
+                          <li>{desc.desc1}</li>
                         )
-                    })}
+                      })}
+                    </ul>
+                  </WorkContent>
+                )
+              })}
 
-                    </TabList>
+              </WorkList>
 
-
-                </ExperienceWrap>
-            </Container>
-        </ExperienceSection>
-
+            </WorkWrap>
+          </Container>
+        </WorkSection>
     )
 }
 
-export default Experience
+export default Work
