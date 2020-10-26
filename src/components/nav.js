@@ -146,7 +146,8 @@ const Nav = (props) => {
       props.handleScroll(url)
     }
 
-    return (
+    if(props.page == 'home'){
+      return (
         <StyledHeader>
             <StyledNav>
                     <NavContent>
@@ -163,6 +164,24 @@ const Nav = (props) => {
             </StyledNav> 
         </StyledHeader>
     )
+    }else {
+      return (
+        <StyledHeader>
+        <StyledNav>
+                <NavContent>
+                    <LogoWrap><Logo /></LogoWrap>
+                    <NavWrap>
+                            <NavLink href = '/'>1. Home</NavLink>
+                        <ResumeLink href = 'nysteo_resume.pdf' download>Resume</ResumeLink>
+                    </NavWrap>
+                  </NavContent>
+          </StyledNav> 
+        </StyledHeader>
+
+      )
+
+    }
+
 }
 
 export default Nav
