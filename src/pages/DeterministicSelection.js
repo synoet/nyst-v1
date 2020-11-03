@@ -1,6 +1,8 @@
 import React, {useState, useEffect, memo} from 'react'
 import styled from 'styled-components'
 import GlobalStyles from '../styles/GlobalStyle'
+import Helmet from 'react-helmet'
+import favicon from '../images/favicon.ico'
 
 // function selection(l, k, choosePivot){
 //     if(l.lenth() == 1){
@@ -349,6 +351,10 @@ const DS = () => {
     // const displayArray
     return (
         <div className = 'root'>
+            <Helmet>
+                <link rel="icon" href={favicon} />
+                <title>Deterministic Selection</title>
+            </Helmet>
             <GlobalStyles/>
             <SelectionSection>
                 <Container>
