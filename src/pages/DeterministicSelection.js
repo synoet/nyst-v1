@@ -211,6 +211,30 @@ button {
     border: 2px solid var(--green);
 
 }
+
+.key {
+    color: white;
+    font-size: 18px;
+
+    .green {
+        background-color: #0c4d48;
+        color: #0c4d48;
+        padding: 5px;
+    }
+
+    .red{
+        background-color: #f7347a;
+        color: #f7347a;
+        padding: 5px;
+
+    }
+    .pink {
+        background-color: #ff71ce;
+        color: #ff71ce;
+        padding: 5px;
+        
+    }
+}
 `;
 
 const SectionTitle = styled.h2`
@@ -486,9 +510,16 @@ const DS = () => {
                                         })}
 
                                     </StyledArray>
+  
                                 )
                             }): ''}
                     </ArrayContainer>
+                    {final? 
+                        <div className = 'key'>
+                        <p className = 'key'><span className = 'green'>A</span> = Smaller then Median, <span className = 'red'>B</span> = Greater then Median, <span className = 'pink'>C</span> = Median of Medians</p>
+                        </div>
+                    : ' '}
+
                     </StepFive>
                 : ' ')}
 
