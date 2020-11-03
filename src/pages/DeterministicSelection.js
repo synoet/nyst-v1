@@ -386,8 +386,14 @@ const DS = () => {
 
                 <StepOne>
                     <SectionTitle>1. Generate an Array of size N, of random integers.</SectionTitle>
+
+                    {counter <= 1 ?
                     <input onChange = {handleLengthChange} value = {arrayLength} placeholder = "n = (length)"></input>
+                    : ''}
+                    {counter <= 1 ?
                     <button onClick = {onRandGenerate}> Generate </button>
+                    : ''}
+                    
                     <StyledArray className = 'outer'>
                         {initArray.map((select, index) => {
                             return (<li className = 'h-item'>{select}</li>)
@@ -397,10 +403,17 @@ const DS = () => {
                 </StepOne> 
                 {(counter >= 2 ? 
                         <StepTwo>
+
+                        
                         <SectionTitle>2. Split into groups of 5.</SectionTitle>
-                        <button onClick = {splitArray}>Split into Groups</button>
+                        {counter <= 2 ?
+                            <button onClick = {splitArray}>Split into Groups</button>
+                        : ''}
                         <SectionTitle>3.Sort each group from lowest to highest(bottom to top)</SectionTitle>
-                        <button onClick = {sortSplit}>Sort Groups</button>
+                        {counter <= 3 ?
+                            <button onClick = {sortSplit}>Sort Groups</button>
+                        : ''}
+
                         <ArrayContainer>
                         {splitArrays.map((select, index) => {
                                 return (
@@ -419,7 +432,10 @@ const DS = () => {
                 {(counter >= 4 ?
                         <StepThree>
                         <SectionTitle>4. Find the Median of each group of 5</SectionTitle>
-                        <button onClick = {findGroupMedian}>Find Group Median</button>
+                        {counter <= 4 ?
+                            <button onClick = {findGroupMedian}>Find Group Median</button>
+                        : ''}
+                        
                         
                         <ArrayContainer>
                         {median? splitArrays.map((select, index) => {
@@ -445,7 +461,10 @@ const DS = () => {
                 {(counter >= 5 ? 
                         <StepFour>
                         <SectionTitle>5. Sort Groups by the Median of each Group</SectionTitle>
-                        <button onClick = {sortAllGroups}>Sort All Groups</button>
+                        {counter <= 5 ?
+                            <button onClick = {sortAllGroups}>Sort All Groups</button>
+                        : ''}
+
                         <ArrayContainer>
                         {sortAll? sortedAllArrays.map((select, index) => {
                                 return (
@@ -469,8 +488,11 @@ const DS = () => {
                 {(counter >= 6 ? 
                         <StepFive>
                         <SectionTitle>6.Find elements smaller and Bigger then the Median of Medians</SectionTitle>
+                        
+                        {counter <= 6 ?
+                            <button onClick = {findSmallBig}>Show Smaller and Bigger</button>
+                        : ''}
 
-                        <button onClick = {findSmallBig}>Show Smaller and Bigger</button>
                         <ArrayContainer>
                         {final? sortedAllArrays.map((select, index) => {
                                 return (
