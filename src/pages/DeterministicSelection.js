@@ -23,10 +23,17 @@ max-width: 100vw;
 align-items: center;
 text-align: center;
 height: 150vh;
+padding-bottom: 100px;
 `;
 
 const Container = styled.div`
 text-align: center;
+
+p {
+    color: white;
+    font-size: 18px;
+    padding-bottom: 100px;
+}
 
 `;
 
@@ -75,7 +82,7 @@ animation: fadeIn ease 5s;
     font-size: 14px;
     margin-top: 5px;
     border: 2px solid red;
-    padding: 2px;
+    padding: 4px;
     width: 20px;
     list-decoration-style: none;
     
@@ -84,7 +91,7 @@ animation: fadeIn ease 5s;
     font-size: 14px;
     margin-top: 5px;
     border: 2px solid blue;
-    padding: 2px;
+    padding: 4px;
     width: 20px;
     list-decoration-style: none;
     
@@ -93,7 +100,7 @@ animation: fadeIn ease 5s;
     font-size: 14px;
     margin-top: 5px;
     border: 2px solid #ff71ce;
-    padding: 2px;
+    padding: 4px;
     width: 20px;
     list-decoration-style: none;
     
@@ -102,7 +109,7 @@ animation: fadeIn ease 5s;
     font-size: 14px;
     margin-top: 5px;
     border: 2px solid #0c4d48;
-    padding: 2px;
+    padding: 4px;
     width: 20px;
     list-decoration-style: none;
     
@@ -111,7 +118,7 @@ animation: fadeIn ease 5s;
     font-size: 14px;
     margin-top: 5px;
     border: 2px solid #f7347a;
-    padding: 2px;
+    padding: 4px;
     width: 20px;
     list-decoration-style: none;
     
@@ -383,6 +390,7 @@ const DS = () => {
             <SelectionSection>
                 <Container>
                 <h1> Deterministic Selection Search</h1>
+                <p>Click the buttons in order, to view median of medians algorithm. By: Teo Nys</p> 
 
                 <StepOne>
                     <SectionTitle>1. Generate an Array of size N, of random integers.</SectionTitle>
