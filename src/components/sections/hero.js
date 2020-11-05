@@ -169,6 +169,31 @@ text-decoration: none;
     transform: skew(0deg, 3deg);
 `;
 
+const FeaturedLinks = styled.div`
+color: #a8b2d1;
+font-size: 21px;
+display: flex;
+flex-direction: row;
+align-items: center;
+margin: 0;
+padding: 0;
+a {
+    color: #53d4ba;
+    display: inline-block;
+    border-bottom: 3px solid #e0e0e0;
+    text-decoration: none;
+    margin-left: 10px;
+
+:hover {
+    border-bottom-color: transparent;
+    -webkit-transform: skew(0deg, 3deg);
+    -ms-transform: skew(0deg, 3deg);
+    transform: skew(0deg, 3deg);
+}
+}
+
+`;
+
 const StyledSocialList = styled.ul`
 color: #a8b2d1;
 font-size: 21px;
@@ -232,6 +257,10 @@ const Hero = () => {
                                 </li>
                             ))}
                         </StyledSocialList>
+                        <FeaturedLinks>
+                            Featured: 
+                            <a href = '/DeterministicSelection'>Deterministic Selection Visualization</a>
+                        </FeaturedLinks>
                         {/* <Button>Full Bio & Resume</Button>  */}
                     </DescriptionWrap>
                 </Container>
