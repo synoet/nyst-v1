@@ -4,15 +4,6 @@ import GlobalStyles from '../styles/GlobalStyle'
 import Helmet from 'react-helmet'
 import favicon from '../images/favicon.ico'
 
-// function selection(l, k, choosePivot){
-//     if(l.lenth() == 1){
-//         if(k == 0){
-//             return l[0]
-//         } 
-//     }
-
-//     pivot = pivot 
-// }
 
 
 const SelectionSection = styled.div`
